@@ -59,7 +59,7 @@ class mod_wikilv_mod_form extends moodleform_mod {
         $mform->addRule('name', $required, 'required', null, 'client');
         $mform->addRule('name', get_string('maximumchars', '', 255), 'maxlength', 255, 'client');
         // Adding the optional "intro" and "introformat" pair of fields
-        $this->add_intro_editor(true, get_string('wikilvintro', 'wikilv'));
+        $this->standard_intro_elements(true, get_string('wikilvintro', 'wikilv'));
 
         $wikilvmodeoptions = array ('collaborative' => get_string('wikilvmodecollaborative', 'wikilv'), 'individual' => get_string('wikilvmodeindividual', 'wikilv'));
         // Don't allow changes to the wikilv type once it is set.
